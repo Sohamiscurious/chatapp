@@ -1,0 +1,130 @@
+/* Reset styles */
+body, h1, h2 {
+  margin: 0;
+  padding: 0;
+}
+
+/* Font Family */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background-color: #f2f2f2; /* Soft grayish pastel background */
+  color: #333; /* Dark text color */
+}
+
+/* Chat container with Parallax Background */
+.chat-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('file:///D:/U%20KNOW%20IT/STARTING%20IT/100xengineers/chatapp/8t1uvjcxpff91.jpg'); /* Replace 'your-image.jpg' with your image path */
+  background-size: cover; /* Make the image cover the entire container */
+  background-attachment: fixed; /* Create a fixed background */
+  background-position: center; /* Center the background image */
+}
+
+/* Chat sidebar */
+.chat-sidebar {
+  width: 20%;
+  background-color: rgba(220, 220, 220, 0.8); /* Semi-transparent pastel gray */
+  border-right: 1px solid #bbb;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: rgba(0, 188, 212, 0.8); /* Semi-transparent pastel blue */
+  color: white;
+  font-size: 20px; /* Increase font size for header */
+}
+
+/* Chat main content */
+.chat-main {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+#messages {
+  list-style-type: none;
+  padding: 0;
+}
+
+#messages li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+  border-radius: 10px; /* Rounder message bubbles */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Input form */
+#form {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  margin-top: 10px;
+}
+
+#input {
+  flex: 1;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  padding: 10px;
+  width: 100%; /* Make input full width */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 11px 15px;
+  margin: 10px 10px 15px 10px;
+  background-color: rgba(0, 188, 212, 0.8); /* Semi-transparent pastel blue */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contact */
+.chat-contacts {
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: rgba(255, 152, 0, 0.8); /* Semi-transparent pastel orange */
+  color: white;
+  font-weight: bold; /* Make the text bolder */
+}
+
+.chat-contacts:hover {
+  background-color: rgba(255, 202, 40, 0.8); /* Lighter pastel orange on hover */
+  color: #333; /* Dark text color on hover */
+}
+
+.contact {
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#contactCount {
+  text-align: center;
+  position: absolute;
+  top: 5;
+  left: 0;
+  width: 40px;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: rgba(233, 30, 99, 0.8); /* Semi-transparent pastel pink */
+  color: white;
+  font-weight: bold; /* Make the text bolder */
+}
+
+/* Media Query for responsiveness */
+@media (max-width: 400px) {
+  /* Add responsive styles here if needed */
+}
+

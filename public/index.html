@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assigement One</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="chat-container">
+      <div class="chat-sidebar">
+        <div class="chat-header">
+          <h1>100x chat</h1>
+        </div>
+        <h3>Contact List</h3>
+        <div class="chat-contacts">
+          <!-- List of contacts goes here -->
+        </div>
+        <p>Online Users: <span id="userCount">0</span></p>
+        <!-- <div class="contact">
+          Contact Counter:
+          <div id="contactCount">0</div>
+        </div> -->
+      </div>
+      <div class="chat-main">
+        <div class="chat-header">
+          <h2>Room</h2>
+        </div>
+        <ul id="messages"></ul>
+        <form id="form" action="">
+          <input id="input" autocomplete="off" /><button>Send</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/script.js"></script>
+  </body>
+</html>
