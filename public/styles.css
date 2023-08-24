@@ -1,45 +1,73 @@
-/* Reset styles */
-body, h1, h2 {
+/* Reset some default styles */
+
+:root {
+  --primary-color: #a200ff;
+  --secondary-color: #e8aa42;
+  --font-color: #f8f1f1;
+  --font-size: 16px;
+}
+
+body,
+h1,
+h2 {
   margin: 0;
   padding: 0;
 }
 
-/* Font Family */
 body {
   font-family: 'Poppins', Arial, sans-serif;
-  background-color: #f2f2f2; /* Soft grayish pastel background */
-  color: #333; /* Dark text color */
+  background-image: url('8t1uvjcxpff91.jpg'); /* Assuming the image is in the same directory */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f2f2f2;
+  color: #333;
 }
 
-/* Chat container with Parallax Background */
+/* Chat container */
 .chat-container {
   display: flex;
   height: 100vh;
   overflow: hidden;
-  background-image: url('file:///D:/U%20KNOW%20IT/STARTING%20IT/100xengineers/chatapp/8t1uvjcxpff91.jpg'); /* Replace 'your-image.jpg' with your image path */
-  background-size: cover; /* Make the image cover the entire container */
-  background-attachment: fixed; /* Create a fixed background */
-  background-position: center; /* Center the background image */
 }
 
 /* Chat sidebar */
+.title {
+  text-align: center;
+}
+
 .chat-sidebar {
   width: 20%;
-  background-color: rgba(220, 220, 220, 0.8); /* Semi-transparent pastel gray */
-  border-right: 1px solid #bbb;
+  background-color: #ededed;
+  border-right: 1px solid #ccc;
 }
 
 .chat-header {
   padding: 10px;
-  background-color: rgba(0, 188, 212, 0.8); /* Semi-transparent pastel blue */
-  color: white;
-  font-size: 20px; /* Increase font size for header */
+  display: flex;
+  margin-top: 16px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--font-color);
 }
 
-/* Chat main content */
+#header {
+  padding: 10px;
+  display: flex;
+  font-size: 34px;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  overflow: hidden;
+}
+
 .chat-main {
   flex: 1;
-  padding: 20px;
+  max-height: 640px;
+  /* padding: 20px; */
   overflow-y: auto;
 }
 
@@ -51,8 +79,10 @@ body {
 #messages li {
   margin-bottom: 10px;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-  border-radius: 10px; /* Rounder message bubbles */
+  margin: 10px;
+  background-color: var(--secondary-color);
+  color: var(--font-color);
+  border-radius: 5px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
@@ -68,19 +98,117 @@ body {
 
 #input {
   flex: 1;
-  position: relative;
-  bottom: 0;
-  left: 0;
   padding: 10px;
-  width: 100%; /* Make input full width */
+  width: 950px;
+  height: 18px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
 
 button {
   padding: 11px 15px;
+  /* margin: 10px 10px 10px 10px; */
+  margin-left: 10px;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  /* margin-bottom: 5px; */
+}
+
+/* contact */
+.chat-contacts {
+  text-align: center;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  border-radius: 5px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.chat-contacts:hover {
+  background-color: var(--secondary-color);
+  color: #000000;
+}
+
+.contact {
+  cursor: pointer;
+}
+
+.userCount {
+  background-color: var(--primary-color);
+  margin: 10px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--font-color);
+}
+
+#contactCount {
+  text-align: center;
+  position: absolute;
+  top: 5;
+  left: 0;
+  width: 40px;
+  padding: 5px;
+  margin: 10px;
+  cursor: pointer;
+  background-color: rgb(101, 129, 206);
+  color: #ccc;
+}
+/* CSS code to style paragraphs */
+p {
+  font-size: 16px; /* Set the font size */
+  color: #e90000; /* Set the text color */
+  margin: 10px 0; /* Set margins (top and bottom) */
+  padding: 5px; /* Set padding */
+  border: 1px solid #ccc; /* Add a border */
+  background-color: #f2f2f2; /* Set background color */
+  text-align: left; /* Align text to the left (default) */
+}
+
+.main-chat {
+  width: 80vw;
+}
+
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+  }
+
+  .main-chat {
+    width: 100vw;
+  }
+
+  .chat-sidebar {
+    width: 100%;
+    border-right: none;
+  }
+
+  .chat-main {
+    flex: none;
+    padding: 10px;
+  }
+
+  #form {
+    /* position: static; */
+    margin: 10px;
+    width: 95vw;
+    margin-top: 5px;
+  }
+}
+
+
+
+
+button {
+  padding: 11px 15px;
   margin: 10px 10px 15px 10px;
-  background-color: rgba(0, 188, 212, 0.8); /* Semi-transparent pastel blue */
+  background-color: #00bcd4; /* Soft pastel blue */
   color: white;
   border: none;
   border-radius: 5px;
@@ -93,13 +221,13 @@ button {
   padding: 5px;
   margin: 10px;
   cursor: pointer;
-  background-color: rgba(255, 152, 0, 0.8); /* Semi-transparent pastel orange */
+  background-color: #ff9800; /* Soft pastel orange */
   color: white;
   font-weight: bold; /* Make the text bolder */
 }
 
 .chat-contacts:hover {
-  background-color: rgba(255, 202, 40, 0.8); /* Lighter pastel orange on hover */
+  background-color: #ffca28; /* Lighter pastel orange on hover */
   color: #333; /* Dark text color on hover */
 }
 
@@ -118,7 +246,7 @@ button {
   padding: 5px;
   margin: 10px;
   cursor: pointer;
-  background-color: rgba(233, 30, 99, 0.8); /* Semi-transparent pastel pink */
+  background-color: #e91e63; /* Soft pastel pink */
   color: white;
   font-weight: bold; /* Make the text bolder */
 }
@@ -127,4 +255,5 @@ button {
 @media (max-width: 400px) {
   /* Add responsive styles here if needed */
 }
+
 
